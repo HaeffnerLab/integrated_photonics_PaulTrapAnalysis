@@ -1,0 +1,28 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Paul Trap Analysis Toolkit
+
+## Project Overview
+This project is a toolkit for developing and analyzing RF Paul traps. It provides functionality to analyze electric properties, trapping parameters, and multipole control of trap designs.
+
+## Main Components
+- [PaulTrapAnalysis/components/Electrode.py](mdc:PaulTrapAnalysis/components/Electrode.py): Defines the Electrode class for representing electrode potentials with 3D grid points.
+- [PaulTrapAnalysis/components/Trap.py](mdc:PaulTrapAnalysis/components/Trap.py): The Trap class combines electrodes and trap parameters.
+- [PaulTrapAnalysis/components/Multipoles.py](mdc:PaulTrapAnalysis/components/Multipoles.py): Handles multipole expansion of trapping potentials.
+- [PaulTrapAnalysis/components/Particle.py](mdc:PaulTrapAnalysis/components/Particle.py): Represents trapped particles.
+- [PaulTrapAnalysis/components/Trajectory.py](mdc:PaulTrapAnalysis/components/Trajectory.py): Analyzes particle trajectories.
+
+## Function Modules
+- [PaulTrapAnalysis/functions/potentials.py](mdc:PaulTrapAnalysis/functions/potentials.py): Functions for handling electric potentials.
+- [PaulTrapAnalysis/functions/spherical_harmonics.py](mdc:PaulTrapAnalysis/functions/spherical_harmonics.py): Spherical harmonics calculations.
+- [PaulTrapAnalysis/functions/gradients.py](mdc:PaulTrapAnalysis/functions/gradients.py): Gradient calculations for potentials.
+- [PaulTrapAnalysis/functions/plotting.py](mdc:PaulTrapAnalysis/functions/plotting.py): Visualization utilities.
+- [PaulTrapAnalysis/functions/utils.py](mdc:PaulTrapAnalysis/functions/utils.py): General utility functions.
+
+## Examples
+- [notebooks/example.ipynb](mdc:notebooks/example.ipynb): General examples of using the toolkit.
+- [notebooks/Etrap-analysis.ipynb](mdc:notebooks/Etrap-analysis.ipynb): Analysis of E-traps.
+- [notebooks/Etrap-BEM.ipynb](mdc:notebooks/Etrap-BEM.ipynb): Boundary Element Method analysis.

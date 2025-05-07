@@ -1,0 +1,77 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Paul Trap Analysis Usage and Examples
+
+## Installation
+The package can be installed using pip:
+```bash
+git clone <repository_url>
+cd PaulTrapAnalysis
+pip install -e .
+```
+
+## Example Notebooks
+The repository contains several example notebooks:
+
+### Basic Examples
+[example.ipynb](mdc:notebooks/example.ipynb) demonstrates:
+- Creating electrodes and traps
+- Basic potential analysis
+- Common usage patterns
+
+### E-Trap Analysis
+[Etrap-analysis.ipynb](mdc:notebooks/Etrap-analysis.ipynb) shows:
+- Analysis of E-trap geometries
+- Multipole calculations
+- Trap parameter optimization
+
+### Boundary Element Method Analysis
+[Etrap-BEM.ipynb](mdc:notebooks/Etrap-BEM.ipynb) covers:
+- BEM techniques for trap analysis
+- Boundary condition handling
+- Advanced electrode modeling
+
+## Common Usage Patterns
+
+### Creating an Electrode
+```python
+from PaulTrapAnalysis.components import Electrode
+import numpy as np
+
+# Create a simple electrode
+x = np.linspace(-1, 1, 100)
+y = np.linspace(-1, 1, 100)
+z = np.linspace(-1, 1, 100)
+potential_data = # some 3D array of potentials
+electrode = Electrode(x, y, z, potential_data, name="electrode1")
+```
+
+### Creating a Trap
+```python
+from PaulTrapAnalysis.components import Trap, Electrode
+
+# Create electrodes
+# ...
+
+# Create a trap with electrodes and parameters
+trap_params = {
+    "mass": 40, # amu
+    "charge": 1, # e
+    "drive_frequency": 20e6, # Hz
+}
+trap = Trap(electrodes={"e1": electrode1, "e2": electrode2}, 
+            trap_parameters=trap_params)
+```
+
+### Analyzing Multipoles
+```python
+from PaulTrapAnalysis.components import Multipoles
+
+# Create multipole analyzer
+multipole_analyzer = Multipoles(trap)
+# Calculate multipole coefficients
+coeffs = multipole_analyzer.calculate_coefficients()
+```

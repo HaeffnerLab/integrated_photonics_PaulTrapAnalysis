@@ -1,0 +1,56 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Paul Trap Analysis Functions
+
+This directory contains utility functions used throughout the Paul Trap Analysis toolkit.
+
+## Potentials
+[potentials.py](mdc:PaulTrapAnalysis/functions/potentials.py) provides functions for:
+- Calculating electric potentials
+- Handling boundary conditions
+- Potential transformations
+
+## Spherical Harmonics
+[spherical_harmonics.py](mdc:PaulTrapAnalysis/functions/spherical_harmonics.py) implements:
+- Spherical harmonic calculations
+- Basis transformations
+- Multipole decomposition
+
+## Gradients
+[gradients.py](mdc:PaulTrapAnalysis/functions/gradients.py) contains:
+- Electric field calculation (potential gradients)
+- Higher-order derivatives
+- Gradient-based optimization utilities
+
+## Plotting
+[plotting.py](mdc:PaulTrapAnalysis/functions/plotting.py) provides:
+- Potential visualization
+- Trajectory plotting
+- Electrode geometry rendering
+
+## Data Handling
+[data.py](mdc:PaulTrapAnalysis/functions/data.py) includes:
+- Data loading/saving utilities
+- Format conversions
+- Data manipulation functions
+
+## Expansion
+[expansion.py](mdc:PaulTrapAnalysis/functions/expansion.py) implements:
+- Series expansions
+- Multipole calculations
+- Basis transformations
+
+## Fitting
+[fitting.py](mdc:PaulTrapAnalysis/functions/fitting.py) provides:
+- Curve fitting utilities
+- Parameter optimization
+- Error minimization
+
+## Utils
+[utils.py](mdc:PaulTrapAnalysis/functions/utils.py) contains:
+- General helper functions
+- Mathematical utilities
+- Common operations

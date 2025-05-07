@@ -1,0 +1,27 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Paul Trap Analysis Components
+
+## Electrode
+The [Electrode](mdc:PaulTrapAnalysis/components/Electrode.py) class contains information about the electrical potential of individual electrodes and uses xarray to store the potential data with 3D grid points. Key features:
+- Supports 3D potential data
+- Uses xarray for data organization
+- Handles potential interpolation
+
+## Trap
+The [Trap](mdc:PaulTrapAnalysis/components/Trap.py) class combines electrodes and trap parameters. It consists of:
+- Dictionary of Electrodes in the trap
+- Dictionary of basic trap parameters (mass, charge, drive frequency, etc.)
+- Uses pandas dataframe for user-friendly queries
+
+## Multipoles
+The [Multipoles](mdc:PaulTrapAnalysis/components/Multipoles.py) class expands the trapping potential in multipoles (spherical harmonic basis). It allows finding efficient electrode voltage solutions to generate specific potential shapes.
+
+## Particle
+The [Particle](mdc:PaulTrapAnalysis/components/Particle.py) class represents particles trapped within the Paul trap, including properties such as mass, charge, and position.
+
+## Trajectory
+The [Trajectory](mdc:PaulTrapAnalysis/components/Trajectory.py) class enables analysis of particle trajectories within the trap, helping understand stability and confinement properties.
